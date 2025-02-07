@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xtime (XTM) WEBPAGE</title>
+  <!-- Favicon: folosește o cale relativă, nu calea de pe D: -->
+  <link rel="icon" href="Imagini/Xtime_logo_6.svg" type="image/svg+xml">
+  
+  <style>
+    /* Activăm scroll-ul lin */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Resetăm marginile și padding-ul */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Stilizare comună pentru secțiuni */
+    .section {
+      height: 100vh;  /* ocupă toată înălțimea viewport-ului */
+      width: 100%;
+      position: relative;
+    }
+    
+    /* Prima secțiune */
+    #section1 {
+      background-color: #71BDFF; /* fundal deschis; poți schimba după preferințe */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+    #section1 a {
+      text-decoration: none;
+      color: #333;
+      font-size: 2em;
+      margin: 10px;
+    }
+    
+    /* A doua secțiune */
+    #section2 {
+      /* Fundalul secțiunii 2: imaginea de fundal se referă la o cale relativă */
+      background: url('Imagini/background2.png') no-repeat center center;
+      background-size: cover;
+      background-color: #71BDFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    
+    /* Imaginea overlay ce vine peste fundalul din a doua secțiune */
+    .overlay-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      max-width: 30%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- Secțiunea 1: Pagina principală -->
+  <section id="section1" class="section">
+    <h1>
+      <a href="https://web.telegram.org/a/#-1001811980749" target="_blank">Link către Telegram</a>
+    </h1>
+    <h2><a href="#section2">Info</a></h2>
+  </section>
+
+  <!-- Secțiunea 2: Conținutul cu fundalul și imaginea overlay -->
+  <section id="section2" class="section">
+    <!-- Imaginea overlay (format PNG) plasată peste fundal -->
+    <img src="Imagini/Token_alocation.svg" alt="Token Allocation" class="overlay-image">
+    
+  </section>
+</body>
+</html>
