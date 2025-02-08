@@ -13,16 +13,16 @@
       scroll-behavior: smooth;
     }
     /* Eliminăm separarea vizuală între secțiuni */
-.section {
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 5vh 0; /* Spațiu între conținut, dar fără să rupă gradientul */
-}
+    .section {
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 5vh 0; /* Spațiu între conținut, dar fără să rupă gradientul */
+    }
     /* Resetăm marginile și padding-ul */
     body, html {
       margin: 0;
@@ -63,25 +63,24 @@
       }
     }
 
-    /* Stilizare comună pentru secțiuni */
-    .section {
-      min-height: 100vh;  /* Ocupă cel puțin întreaga înălțime a ecranului */
-      width: 100%;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 5vh 0; /* Spațiu între conținut, dar fără să rupă gradientul */
-    }
-
-    /* Prima secțiune - fără fundal propriu, doar text */
+    /* Stilizare pentru linkuri cu chenare ovale */
     #section1 a {
       text-decoration: none;
       color: #333;
-      font-size: 2em;
+      font-size: 1em; /* Dimensiune mai mică */
       margin: 10px;
+      padding: 10px 20px; /* Spațiu în jurul textului */
+      border: 2px solid #333; /* Bordură pentru chenar */
+      border-radius: 50px; /* Colțuri rotunjite pentru efect oval */
+      display: inline-block; /* Aliniere pe orizontală */
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.7); /* Fundal transparent */
+    }
+
+    /* Așezăm cele două linkuri una lângă alta */
+    #section1 h1, #section1 h2 {
+      display: inline-block;
+      margin: 0 15px; /* Distanță între cele două elemente */
     }
 
     /* Imaginea overlay ce vine peste fundalul din a doua secțiune */
@@ -113,3 +112,4 @@
   </section>
 </body>
 </html>
+
