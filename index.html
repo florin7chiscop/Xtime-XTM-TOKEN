@@ -20,7 +20,8 @@
       height: 100%;
       width: 100%;
       font-family: Arial, sans-serif;
-   
+    }
+    
     img {
       max-width: 100%;
       max-height: 100vh;  /* Asigură-te că imaginea nu depășește înălțimea ecranului */
@@ -41,18 +42,17 @@
         max-height: 90vh;
       }
     }
-    }
     
     /* Stilizare comună pentru secțiuni */
     .section {
-      height: 100vh;  /* ocupă toată înălțimea viewport-ului */
+      height: 100vh;  /* Ocupă toată înălțimea viewport-ului */
       width: 100%;
       position: relative;
     }
     
     /* Prima secțiune */
     #section1 {
-      background-color: #71BDFF; /* fundal deschis; poți schimba după preferințe */
+      background-color: #71BDFF; /* Fundal deschis */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -70,12 +70,13 @@
     /* A doua secțiune */
     #section2 {
       background: url('background2.png') no-repeat center center;
-      background-size: cover;
+      background-size: 100% 100%; /* Acoperă întreaga secțiune */
       background-color: #71BDFF;
       display: flex;
       justify-content: center;
       align-items: center;
       position: relative;
+      overflow: hidden; /* Previne depășirea imaginii overlay */
     }
     
     /* Imaginea overlay ce vine peste fundalul din a doua secțiune */
@@ -83,9 +84,9 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%) scale(2);
+      transform: translate(-50%, -50%) scale(1.5); /* Creștem dimensiunea de 1.5x */
       z-index: 2;
-      max-width: 30%;
+      max-width: 60%; /* Am dublat dimensiunea față de 30% */
       height: auto;
     }
   </style>
@@ -103,9 +104,10 @@
   <section id="section2" class="section">
     <!-- Imaginea overlay (format PNG) plasată peste fundal -->
     <img src="https://github.com/florin7chiscop/Xtime-XTM-TOKEN/raw/main/Token%20alocation%201000p.png" alt="Imagine overlay" class="overlay-image">
-    
- </body>
-  
+  </section>
+</body>
+</html>
+
 </html> 
 </body>
 
