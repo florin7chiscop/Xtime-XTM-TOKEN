@@ -12,7 +12,17 @@
     html {
       scroll-behavior: smooth;
     }
-    
+    /* Eliminăm separarea vizuală între secțiuni */
+.section {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5vh 0; /* Spațiu între conținut, dar fără să rupă gradientul */
+}
     /* Resetăm marginile și padding-ul */
     body, html {
       margin: 0;
