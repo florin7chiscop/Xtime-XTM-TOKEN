@@ -1,2 +1,84 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xtime (XTM) WEBPAGE</title>
+  <link rel="icon" href="Xtime_logo_6.svg" type="image/svg+xml">
+  
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif;
+    }
+    
+    .section {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+    }
+    
+    #section1 {
+      background-color: #71BDFF;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+    #section1 a {
+      text-decoration: none;
+      color: #333;
+      font-size: 2em;
+      margin: 10px;
+    }
+    
+    #section2 {
+     background: url('background2.png') no-repeat center center;
+      background-size: cover;
+      background-color: #71BDFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    
+    .overlay-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      max-width: 30%;
+      height: auto;
+    }
 
+    @media (max-width: 768px) {
+      .overlay-image {
+        max-width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section id="section1" class="section">
+    <h1>
+      <a href="https://web.telegram.org/a/#-1001811980749" target="_blank">Link către Telegram</a>
+    </h1>
+    <h2><a href="#section2">Info</a></h2>
+  </section>
+
+  <section id="section2" class="section">
+    <img src="Token_alocation_1000p.png" alt="Token Allocation" class="overlay-image">
+  </section>
+</body>
+</html>
 
