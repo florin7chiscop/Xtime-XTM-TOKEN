@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Xtime (XTM) WEBPAGE</title>
+  <!-- Favicon: folosește o cale relativă, nu calea de pe D: -->
   <link rel="icon" href="Xtime_logo_6.svg" type="image/svg+xml">
   
   <style>
+    /* Activăm scroll-ul lin */
     html {
       scroll-behavior: smooth;
     }
     
+    /* Resetăm marginile și padding-ul */
     body, html {
       margin: 0;
       padding: 0;
@@ -19,14 +22,16 @@
       font-family: Arial, sans-serif;
     }
     
+    /* Stilizare comună pentru secțiuni */
     .section {
-      height: 100vh;
+      height: 100vh;  /* ocupă toată înălțimea viewport-ului */
       width: 100%;
       position: relative;
     }
     
+    /* Prima secțiune */
     #section1 {
-      background-color: #71BDFF;
+      background-color: #71BDFF; /* fundal deschis; poți schimba după preferințe */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -41,8 +46,10 @@
       margin: 10px;
     }
     
+    /* A doua secțiune */
     #section2 {
-     background: url('background2.png') no-repeat center center;
+      /* Fundalul secțiunii 2: imaginea de fundal se referă la o cale relativă */
+      background: url('background2.png') no-repeat center center;
       background-size: cover;
       background-color: #71BDFF;
       display: flex;
@@ -51,6 +58,7 @@
       position: relative;
     }
     
+    /* Imaginea overlay ce vine peste fundalul din a doua secțiune */
     .overlay-image {
       position: absolute;
       top: 50%;
@@ -60,15 +68,10 @@
       max-width: 30%;
       height: auto;
     }
-
-    @media (max-width: 768px) {
-      .overlay-image {
-        max-width: 80%;
-      }
-    }
   </style>
 </head>
 <body>
+  <!-- Secțiunea 1: Pagina principală -->
   <section id="section1" class="section">
     <h1>
       <a href="https://web.telegram.org/a/#-1001811980749" target="_blank">Link către Telegram</a>
@@ -76,8 +79,11 @@
     <h2><a href="#section2">Info</a></h2>
   </section>
 
+  <!-- Secțiunea 2: Conținutul cu fundalul și imaginea overlay -->
   <section id="section2" class="section">
-    <img src="Token_alocation_1000p.png" alt="Token Allocation" class="overlay-image">
+    <!-- Imaginea overlay (format PNG) plasată peste fundal -->
+    <img src="Token_alocation.svg" alt="Token Allocation" class="overlay-image">
+    
   </section>
 </body>
 </html>
