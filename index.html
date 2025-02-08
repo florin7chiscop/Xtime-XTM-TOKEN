@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ro"> 
 <head>
   <meta charset="UTF-8">
@@ -12,7 +11,17 @@
     html {
       scroll-behavior: smooth;
     }
-
+    /* Eliminăm separarea vizuală între secțiuni */
+.section {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5vh 0; /* Spațiu între conținut, dar fără să rupă gradientul */
+}
     /* Resetăm marginile și padding-ul */
     body, html {
       margin: 0;
@@ -32,8 +41,30 @@
       margin: 0;
     }
 
+    img {
+      max-width: 100%;
+      max-height: 100vh;  /* Asigură-te că imaginea nu depășește înălțimea ecranului */
+      object-fit: contain; /* Păstrează proporțiile imaginii */
+      cursor: zoom-in;
+      transition: transform 0.25s ease;
+    }
+
+    /* Permite zoom-ul la imagine atunci când este apăsată pe mobil */
+    img:active {
+      transform: scale(1.5); /* Mărește imaginea când este apăsată */
+    }
+
+    /* Pentru imagini mari care nu se potrivesc ecranului */
+    @media (max-width: 600px) {
+      img {
+        max-width: 90%;
+        max-height: 90vh;
+      }
+    }
+
     /* Stilizare comună pentru secțiuni */
     .section {
+      min-height: 100vh;  /* Ocupă cel puțin întreaga înălțime a ecranului */
       width: 100%;
       position: relative;
       display: flex;
@@ -41,10 +72,12 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 5vh 0;
+      padding: 5vh 0; /* Spațiu între conținut, dar fără să rupă gradientul */
     }
 
-    /* Stilizare pentru linkuri cu chenare ovale */
+    /* Prima secțiune - fără fundal propriu, doar text */
+    #section1 a {  <section1 a>
+/* Stilizare pentru linkuri cu chenare ovale */
     #section1 a {
       text-decoration: none;
       color: #333;
@@ -62,6 +95,12 @@
     #section1 h1, #section1 h2 {
       display: inline-block;
       margin: 0 15px; /* Distanță între cele două elemente */
+    } 
+  </section1 a>
+      text-decoration: none;
+      color: #333;
+      font-size: 2em;
+      margin: 10px;
     }
 
     /* Imaginea overlay ce vine peste fundalul din a doua secțiune */
@@ -71,7 +110,7 @@
       left: 50%;
       transform: translate(-50%, -50%) scale(1); /* Creștem dimensiunea de 1.5x */
       z-index: 2;
-      max-width: 60%;
+      max-width: 60%; /* Am dublat dimensiunea față de 30% */
       height: auto;
     }
 
@@ -80,13 +119,16 @@
 <body>
   <!-- Secțiunea 1: Pagina principală -->
   <section id="section1" class="section">
+    
     <h1>
-      <a href="https://web.telegram.org/a/#-1001811980749" target="_blank">Link to Telegram</a>
+      <a href="https://web.telegram.org/a/#-1001811980749" target="_blank">Link către Telegram</a>
     </h1>
     <h2><a href="#section2">Info</a></h2>
+    
   </section>
 
   <!-- Secțiunea 2: Conținutul cu imaginea overlay -->
+ 
   <section id="section2" class="section">
     <!-- Imaginea overlay (format PNG) plasată peste fundal -->
     <img src="https://github.com/florin7chiscop/Xtime-XTM-TOKEN/raw/main/Token%20alocation%201000p.png" alt="Imagine overlay" class="overlay-image">
