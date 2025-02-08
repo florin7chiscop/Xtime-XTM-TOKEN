@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Xtime (XTM) WEBPAGE</title>
-  <!-- Favicon: folosește o cale relativă, nu calea de pe D: -->
-  <link rel="icon" href=" <img src="https://github.com/florin7chiscop/Xtime-XTM-TOKEN/blob/main/Xtime%20logo%206.svg" alt="descriere imagine>
-" type="image/svg+xml">
+  <!-- Favicon -->
+  <link rel="icon" href="https://github.com/florin7chiscop/Xtime-XTM-TOKEN/blob/main/Xtime%20logo%206.svg" type="image/svg+xml">
  
   <style>
     /* Activăm scroll-ul lin */
@@ -49,7 +48,6 @@
     
     /* A doua secțiune */
     #section2 {
-      /* Fundalul secțiunii 2: imaginea de fundal se referă la o cale relativă */
       background: url('background2.png') no-repeat center center;
       background-size: cover;
       background-color: #71BDFF;
@@ -83,9 +81,32 @@
   <!-- Secțiunea 2: Conținutul cu fundalul și imaginea overlay -->
   <section id="section2" class="section">
     <!-- Imaginea overlay (format PNG) plasată peste fundal -->
-   
-    
+    <img src="https://github.com/florin7chiscop/Xtime-XTM-TOKEN/blob/main/Token%20alocation%201000p.png" alt="Imagine overlay" class="overlay-image">
   </section>
+
+  <h1>Imagine din link extern</h1>
+  <p>Introduceți un link pentru a afișa imaginea:</p>
+  <input type="text" id="imageLink" placeholder="Introduceți link-ul imaginii" />
+  <button onclick="afiseazaImagine()">Afișează Imagine</button>
+
+  <div id="imagineContainer"></div>
+
+  <script>
+      function afiseazaImagine() {
+          var link = document.getElementById("imageLink").value;
+          var container = document.getElementById("imagineContainer");
+
+          if (link) {
+              var img = document.createElement("img");
+              img.src = link;
+              img.alt = "Imagine externă";
+              img.style.maxWidth = "100%";
+              container.innerHTML = "";
+              container.appendChild(img);
+          } else {
+              container.innerHTML = "<p>Te rog, introdu un link valid!</p>";
+          }
+      }
+  </script>
 </body>
 </html>
-
