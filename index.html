@@ -1,4 +1,5 @@
-<html lang="ro">
+<!DOCTYPE html>
+<html lang="ro"> 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,17 +12,7 @@
     html {
       scroll-behavior: smooth;
     }
-    /* Eliminăm separarea vizuală între secțiuni */
-.section {
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 5vh 0; /* Spațiu între conținut, dar fără să rupă gradientul */
-}
+
     /* Resetăm marginile și padding-ul */
     body, html {
       margin: 0;
@@ -41,30 +32,8 @@
       margin: 0;
     }
 
-    img {
-      max-width: 100%;
-      max-height: 100vh;  /* Asigură-te că imaginea nu depășește înălțimea ecranului */
-      object-fit: contain; /* Păstrează proporțiile imaginii */
-      cursor: zoom-in;
-      transition: transform 0.25s ease;
-    }
-
-    /* Permite zoom-ul la imagine atunci când este apăsată pe mobil */
-    img:active {
-      transform: scale(1.5); /* Mărește imaginea când este apăsată */
-    }
-
-    /* Pentru imagini mari care nu se potrivesc ecranului */
-    @media (max-width: 600px) {
-      img {
-        max-width: 90%;
-        max-height: 90vh;
-      }
-    }
-
     /* Stilizare comună pentru secțiuni */
     .section {
-      min-height: 100vh;  /* Ocupă cel puțin întreaga înălțime a ecranului */
       width: 100%;
       position: relative;
       display: flex;
@@ -72,39 +41,11 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 5vh 0; /* Spațiu între conținut, dar fără să rupă gradientul */
+      padding: 5vh 0;
     }
 
-    /* Prima secțiune - fără fundal propriu, doar text */
+    /* Stilizare pentru linkuri cu chenare ovale */
     #section1 a {
-      text-decoration: none;
-      color: #333;
-      font-size: 2em;
-      margin: 10px;
-    }
-
-    /* Imaginea overlay ce vine peste fundalul din a doua secțiune */
-    .overlay-image {
-      position: absolute;
-      top: 25%; /* Poziționăm imaginea mai sus pentru a nu tăia marginea de jos */
-      left: 50%;
-      transform: translate(-50%, -50%) scale(1); /* Creștem dimensiunea de 1.5x */
-      z-index: 2;
-      max-width: 60%; /* Am dublat dimensiunea față de 30% */
-      height: auto;
-    }
-
-  </style>
-</head>
-<body>
-  <!-- Secțiunea 1: Pagina principală -->
-  <section id="section1" class="section">
-    
-    <h1>
-      <a href="https://web.telegram.org/a/#-1001811980749" target="_blank">Link către Telegram</a>
-    </h1>
-    <h2><a href="#section2">Info</a></h2>
-    <section1 class='section>
       text-decoration: none;
       color: #333;
       font-size: 1em; /* Dimensiune mai mică */
@@ -115,14 +56,34 @@
       display: inline-block; /* Aliniere pe orizontală */
       text-align: center;
       background-color: rgba(255, 255, 255, 0.7); /* Fundal transparent */
-    
+    }
 
     /* Așezăm cele două linkuri una lângă alta */
     #section1 h1, #section1 h2 {
       display: inline-block;
       margin: 0 15px; /* Distanță între cele două elemente */
-    
-    </section1 class='section>
+    }
+
+    /* Imaginea overlay ce vine peste fundalul din a doua secțiune */
+    .overlay-image {
+      position: absolute;
+      top: 25%; /* Poziționăm imaginea mai sus pentru a nu tăia marginea de jos */
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1); /* Creștem dimensiunea de 1.5x */
+      z-index: 2;
+      max-width: 60%;
+      height: auto;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Secțiunea 1: Pagina principală -->
+  <section id="section1" class="section">
+    <h1>
+      <a href="https://web.telegram.org/a/#-1001811980749" target="_blank">Link to Telegram</a>
+    </h1>
+    <h2><a href="#section2">Info</a></h2>
   </section>
 
   <!-- Secțiunea 2: Conținutul cu imaginea overlay -->
@@ -132,3 +93,4 @@
   </section>
 </body>
 </html>
+
