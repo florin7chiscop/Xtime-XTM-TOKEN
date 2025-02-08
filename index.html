@@ -25,7 +25,7 @@
     /* Aplicăm fundalul gradient pe întregul body */
     body {
       background: linear-gradient(to bottom, 
-              rgba(0, 128, 0, 0.8),   /* Verde semi-transparent */
+              rgba(25, 25, 112, 0.8),   /* Blue Marin */
               rgba(173, 216, 230, 0.8), /* Albastru deschis semi-transparent */
               rgba(255, 255, 255, 0.8)); /* Alb semi-transparent */
       height: 100%;
@@ -64,7 +64,35 @@
       align-items: center;
       text-align: center;
     }
-    
+    /* Eliminăm separarea vizuală între secțiuni */
+.section {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5vh 0; /* Spațiu între conținut, dar fără să rupă gradientul */
+}
+
+/* Eliminăm fundalurile individuale ale secțiunilor */
+#section1, #section2 {
+  background: none;
+  min-height: auto; /* Lăsăm conținutul să definească înălțimea */
+}
+
+/* Fixăm imaginea overlay */
+.overlay-image {
+  position: absolute;
+  top: 100%; /* O facem să apară imediat sub prima secțiune */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  max-width: 60%;
+  height: auto;
+}
+
     /* Prima secțiune - fără fundal propriu, doar text */
     #section1 a {
       text-decoration: none;
