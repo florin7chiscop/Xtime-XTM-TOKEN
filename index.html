@@ -31,7 +31,7 @@
       height: 100%;
       margin: 0;
     }
-    
+
     img {
       max-width: 100%;
       max-height: 100vh;  /* Asigură-te că imaginea nu depășește înălțimea ecranului */
@@ -52,7 +52,7 @@
         max-height: 90vh;
       }
     }
-    
+
     /* Stilizare comună pentru secțiuni */
     .section {
       min-height: 100vh;  /* Ocupă cel puțin întreaga înălțime a ecranului */
@@ -63,35 +63,8 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      padding: 5vh 0; /* Spațiu între conținut, dar fără să rupă gradientul */
     }
-    /* Eliminăm separarea vizuală între secțiuni */
-.section {
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 5vh 0; /* Spațiu între conținut, dar fără să rupă gradientul */
-}
-
-/* Eliminăm fundalurile individuale ale secțiunilor */
-#section1, #section2 {
-  background: none;
-  min-height: auto; /* Lăsăm conținutul să definească înălțimea */
-}
-
-/* Fixăm imaginea overlay */
-.overlay-image {
-  position: absolute;
-  top: 100%; /* O facem să apară imediat sub prima secțiune */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  max-width: 60%;
-  height: auto;
-}
 
     /* Prima secțiune - fără fundal propriu, doar text */
     #section1 a {
@@ -100,58 +73,18 @@
       font-size: 2em;
       margin: 10px;
     }
-    /* Eliminăm separarea vizuală între secțiuni */
-.section {
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 5vh 0; /* Spațiu între conținut, dar fără să rupă gradientul */
-}
-
-/* Eliminăm fundalurile individuale ale secțiunilor */
-#section1, #section2 {
-  background: none;
-  min-height: auto; /* Lăsăm conținutul să definească înălțimea */
-}
-
-    /* A doua secțiune */
-    #section2 {
-      position: relative;
-      overflow: hidden; /* Previne depășirea imaginii overlay */
-      min-height: 120vh; /* Mărim secțiunea pentru a lăsa loc sub imagine */
-    }
-    /* Eliminăm separarea vizuală între secțiuni */
-.section {
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 5vh 0; /* Spațiu între conținut, dar fără să rupă gradientul */
-}
-
-/* Eliminăm fundalurile individuale ale secțiunilor */
-#section1, #section2 {
-  background: none;
-  min-height: auto; /* Lăsăm conținutul să definească înălțimea */
-}
 
     /* Imaginea overlay ce vine peste fundalul din a doua secțiune */
     .overlay-image {
       position: absolute;
-      top: 45%; /* Mutăm imaginea mai sus pentru a se vedea fundalul sub ea */
+      top: 25%; /* Poziționăm imaginea mai sus pentru a nu tăia marginea de jos */
       left: 50%;
       transform: translate(-50%, -50%) scale(1); /* Creștem dimensiunea de 1.5x */
       z-index: 2;
       max-width: 60%; /* Am dublat dimensiunea față de 30% */
       height: auto;
     }
+
   </style>
 </head>
 <body>
@@ -170,4 +103,3 @@
   </section>
 </body>
 </html>
-
