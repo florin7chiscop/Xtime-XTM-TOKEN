@@ -71,7 +71,13 @@
     #section2 {
       background: url('background2.png') no-repeat center center;
       background-size: 100% 100%; /* Acoperă întreaga secțiune */
-      background-color: #71BDFF;
+      body {
+      background: linear-gradient(to bottom, 
+              rgba(0, 128, 0, 0.8),   /* Verde semi-transparent */
+              rgba(173, 216, 230, 0.8), /* Albastru deschis semi-transparent */
+              rgba(255, 255, 255, 0.8)); /* Alb semi-transparent */
+}
+
       display: flex;
       justify-content: center;
       align-items: center;
