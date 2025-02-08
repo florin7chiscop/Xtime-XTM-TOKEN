@@ -21,6 +21,16 @@
       width: 100%;
       font-family: Arial, sans-serif;
     }
+
+    /* Aplicăm fundalul gradient pe întregul body */
+    body {
+      background: linear-gradient(to bottom, 
+              rgba(0, 128, 0, 0.8),   /* Verde semi-transparent */
+              rgba(173, 216, 230, 0.8), /* Albastru deschis semi-transparent */
+              rgba(255, 255, 255, 0.8)); /* Alb semi-transparent */
+      height: 100%;
+      margin: 0;
+    }
     
     img {
       max-width: 100%;
@@ -48,11 +58,6 @@
       min-height: 100vh;  /* Ocupă cel puțin întreaga înălțime a ecranului */
       width: 100%;
       position: relative;
-    }
-    
-    /* Prima secțiune */
-    #section1 {
-      background-color: #71BDFF; /* Fundal deschis */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -60,6 +65,7 @@
       text-align: center;
     }
     
+    /* Prima secțiune - fără fundal propriu, doar text */
     #section1 a {
       text-decoration: none;
       color: #333;
@@ -69,18 +75,6 @@
     
     /* A doua secțiune */
     #section2 {
-      background: url('background2.png') no-repeat center center;
-      background-size: 100% 100%; /* Acoperă întreaga secțiune */
-      body {
-      background: linear-gradient(to bottom, 
-              rgba(0, 128, 0, 0.8),   /* Verde semi-transparent */
-              rgba(173, 216, 230, 0.8), /* Albastru deschis semi-transparent */
-              rgba(255, 255, 255, 0.8)); /* Alb semi-transparent */
-}
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
       position: relative;
       overflow: hidden; /* Previne depășirea imaginii overlay */
       min-height: 120vh; /* Mărim secțiunea pentru a lăsa loc sub imagine */
@@ -107,7 +101,7 @@
     <h2><a href="#section2">Info</a></h2>
   </section>
 
-  <!-- Secțiunea 2: Conținutul cu fundalul și imaginea overlay -->
+  <!-- Secțiunea 2: Conținutul cu imaginea overlay -->
   <section id="section2" class="section">
     <!-- Imaginea overlay (format PNG) plasată peste fundal -->
     <img src="https://github.com/florin7chiscop/Xtime-XTM-TOKEN/raw/main/Token%20alocation%201000p.png" alt="Imagine overlay" class="overlay-image">
@@ -115,8 +109,3 @@
 </body>
 </html>
 
-
-</html> 
-</body>
-
-</html>
