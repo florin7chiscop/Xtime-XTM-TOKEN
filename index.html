@@ -84,29 +84,9 @@
     <img src="https://github.com/florin7chiscop/Xtime-XTM-TOKEN/blob/main/Token%20alocation%201000p.png" alt="Imagine overlay" class="overlay-image">
   </section>
 
+  <!-- Imaginea se încarcă direct din linkul specificat -->
   <h1>Imagine din link extern</h1>
-  <p>Introduceți un link pentru a afișa imaginea:</p>
-  <input type="text" id="imageLink" placeholder="Introduceți link-ul imaginii" />
-  <button onclick="afiseazaImagine()">Afișează Imagine</button>
+  <img src="https://github.com/florin7chiscop/Xtime-XTM-TOKEN/blob/main/Token%20alocation%201000p.png" alt="Imagine externă" style="max-width: 100%;">
 
-  <div id="imagineContainer"></div>
-
-  <script>
-      function afiseazaImagine() {
-          var link = document.getElementById("imageLink").value;
-          var container = document.getElementById("imagineContainer");
-
-          if (link) {
-              var img = document.createElement("img");
-              img.src = link;
-              img.alt = "Imagine externă";
-              img.style.maxWidth = "100%";
-              container.innerHTML = "";
-              container.appendChild(img);
-          } else {
-              container.innerHTML = "<p>Te rog, introdu un link valid!</p>";
-          }
-      }
-  </script>
 </body>
 </html>
