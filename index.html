@@ -45,7 +45,7 @@
     
     /* Stilizare comună pentru secțiuni */
     .section {
-      height: 100vh;  /* Ocupă toată înălțimea viewport-ului */
+      min-height: 100vh;  /* Ocupă cel puțin întreaga înălțime a ecranului */
       width: 100%;
       position: relative;
     }
@@ -77,12 +77,13 @@
       align-items: center;
       position: relative;
       overflow: hidden; /* Previne depășirea imaginii overlay */
+      min-height: 120vh; /* Mărim secțiunea pentru a lăsa loc sub imagine */
     }
     
     /* Imaginea overlay ce vine peste fundalul din a doua secțiune */
     .overlay-image {
       position: absolute;
-      top: 50%;
+      top: 40%; /* Mutăm imaginea mai sus pentru a se vedea fundalul sub ea */
       left: 50%;
       transform: translate(-50%, -50%) scale(1.5); /* Creștem dimensiunea de 1.5x */
       z-index: 2;
@@ -107,6 +108,7 @@
   </section>
 </body>
 </html>
+
 
 </html> 
 </body>
