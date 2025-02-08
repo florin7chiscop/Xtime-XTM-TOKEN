@@ -20,15 +20,37 @@
       height: 100%;
       width: 100%;
       font-family: Arial, sans-serif;
-      /* Configurarea dimensiunii maxime a imaginii pe mobil */
-      .container {
-      width: 225%;
-      height: 225vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
+    .container {
+  width: 100%; /* Lățimea containerului va ocupa 100% din ecran */
+  height: 100vh; /* Înălțimea containerului va ocupa 100% din viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ascunde orice depășire a containerului */
+}
+
+img {
+  min-width: 300px;  /* Lățimea minimă a imaginii va fi de 300px */
+  min-height: 300px; /* Înălțimea minimă a imaginii va fi de 300px */
+  max-width: 100%;   /* Lățimea maximă a imaginii va fi 100% din container */
+  max-height: 100vh; /* Înălțimea maximă a imaginii va fi 100% din înălțimea ecranului */
+  object-fit: contain; /* Păstrează proporțiile imaginii */
+  cursor: zoom-in;
+  transition: transform 0.25s ease; /* Efect de tranziție la zoom */
+}
+
+img:active {
+  transform: scale(1.5); /* Mărește imaginea la apăsare */
+}
+
+@media (max-width: 600px) {
+  img {
+    min-width: 150px;  /* Lățimea minimă pe mobil va fi de 150px */
+    min-height: 150px; /* Înălțimea minimă pe mobil va fi de 150px */
+  }
+}
+
+}
 
     img {
       max-width: 100%;
