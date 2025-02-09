@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html lang="ro">
+<html lang="ro">  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Xtime (XTM) WEBPAGE</title>
-  <!-- Favicon: folosește o cale relativă, nu calea de pe D: -->
-  <link rel="icon" href="Imagini/Xtime_logo_6.svg" type="image/svg+xml">
-  
+  <!-- Favicon -->
+  <link rel="icon" href="https://github.com/florin7chiscop/Xtime-XTM-TOKEN/raw/main/Xtime%20logo%206.svg" type="image/svg+xml">
+ 
   <style>
     /* Activăm scroll-ul lin */
     html {
       scroll-behavior: smooth;
     }
-    
+
     /* Resetăm marginile și padding-ul */
     body, html {
       margin: 0;
@@ -21,81 +20,91 @@
       width: 100%;
       font-family: Arial, sans-serif;
     }
-    
-    /* Stilizare comună pentru secțiuni */
-    .section {
-      height: 100vh;  /* ocupă toată înălțimea viewport-ului */
-      width: 100%;
-      position: relative;
+
+    /* Fundal gradient */
+    body {
+      background: linear-gradient(to bottom, 
+              rgba(25, 25, 112, 0.001),   /* Blue Marin */
+              rgba(173, 216, 230, 0.8),     /* Albastru deschis semi-transparent */
+              rgba(255, 255, 255, 0.001));  /* Alb semi-transparent */
     }
-    
-    /* Prima secțiune */
-    #section1 {
-      background-color: #71BDFF; /* fundal deschis; poți schimba după preferințe */
+
+    /* Stilizare secțiuni */
+    .section {
+      width: 100%;
+      min-height: 100vh;
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
+      padding: 5vh 0;
     }
-    
+
+    /* Fundal pentru secțiunea 1 */
+    #section1 {
+      background: url("https://github.com/florin7chiscop/Xtime-XTM-TOKEN/raw/main/Abstract%20prima%20sectiune.png") no-repeat center center;
+      background-size: cover;
+    }
+
+    /* Stilizare pentru linkuri */
     #section1 a {
       text-decoration: none;
       color: #333;
-      font-size: 2em;
+      font-size: 1.2em;
       margin: 10px;
+      padding: 10px 20px;
+      border: 2px solid #333;
+      border-radius: 50px;
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.7);
+      transition: 0.3s;
     }
-    
-    /* A doua secțiune */
-    #section2 {
-      /* Fundalul secțiunii 2: imaginea de fundal se referă la o cale relativă */
-      background: url('Imagini/background2.png') no-repeat center center;
-      background-size: cover;
-      background-color: #71BDFF;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
+    #section1 a:hover {
+      background-color: #ddd;
     }
-    
-    /* Imaginea overlay ce vine peste fundalul din a doua secțiune */
+
+    /* Stilizare pentru imaginile overlay */
     .overlay-image {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-      max-width: 90%;
+      max-width: 60%;
       height: auto;
+    }
+
+    /* Media query pentru ecrane mici */
+    @media (max-width: 600px) {
+      .overlay-image {
+        max-width: 90%;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Secțiunea 1: Pagina principală -->
+  <!-- Secțiunea 1: Pagina principală cu linkuri -->
   <section id="section1" class="section">
     <h1>
-      <a href="https://web.telegram.org/a/#-1001811980749" target="_blank">Link către Telegram</a>
+      <a href="https://web.telegram.org/a/#-1001811980749" target="_blank">Link to Telegram</a>
     </h1>
-    <h2><a href="#section2">Info</a></h2>
+    <h2>
+      <a href="#section2">Info</a>
+    </h2>
   </section>
-<!-- Secțiunea 2: Conținutul cu fundalul și imaginea overlay -->
- 
-    <!-- Imaginea overlay (format PNG) plasată peste fundal -->
- <img src="Imagini/Token_alocation.svg" alt="Token Allocation" class="overlay-image">
+
+  <!-- Secțiunea 2: Imaginea existentă -->
   <section id="section2" class="section">
- /* Imaginea overlay ce vine peste fundalul din a doua secțiune */
-    .overlay-image {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-      max-width: 90%;
-      height: auto;}
-
-    <img src="Imagini/overlay.png" alt="Token alocation" class="overlay-image">
-
+    <img src="https://github.com/florin7chiscop/Xtime-XTM-TOKEN/raw/main/Token%20alocation%201000p.png" 
+         class="overlay-image" 
+         alt="Token Allocation">
+  </section>
   
+  <!-- Secțiunea 3: Noua imagine -->
+  <section id="section3" class="section">
+    <img src="https://github.com/florin7chiscop/Xtime-XTM-TOKEN/raw/main/Roadmap.png" 
+         class="overlay-image" 
+         alt="Noua imagine">
   </section>
 </body>
 </html>
+
 
