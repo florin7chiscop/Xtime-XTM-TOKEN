@@ -11,17 +11,7 @@
     html {
       scroll-behavior: smooth;
     }
-    /* Eliminăm separarea vizuală între secțiuni */
-.section {
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 5vh 0; /* Spațiu între conținut, dar fără să rupă gradientul */
-}
+
     /* Resetăm marginile și padding-ul */
     body, html {
       margin: 0;
@@ -31,91 +21,62 @@
       font-family: Arial, sans-serif;
     }
 
-    /* Aplicăm fundalul gradient pe întregul body */
+    /* Fundal gradient */
     body {
       background: linear-gradient(to bottom, 
               rgba(25, 25, 112, 0.001),   /* Blue Marin */
               rgba(173, 216, 230, 0.8), /* Albastru deschis semi-transparent */
               rgba(255, 255, 255, 0.001)); /* Alb semi-transparent */
-      height: 100%;
-      margin: 0;
     }
 
-    img {
-      max-width: 100%;
-      max-height: 100vh;  /* Asigură-te că imaginea nu depășește înălțimea ecranului */
-      object-fit: contain; /* Păstrează proporțiile imaginii */
-      cursor: zoom-in;
-      transition: transform 0.25s ease;
-    }
-     #section1 {
-      background: url("https://github.com/florin7chiscop/Xtime-XTM-TOKEN/raw/main/Abstract%20prima%20sectiune.png") no-repeat center center;
-      background-size: cover;
-    }
-
-    /* Permite zoom-ul la imagine atunci când este apăsată pe mobil */
-    img:active {
-      transform: scale(1.5); /* Mărește imaginea când este apăsată */
-    }
-
-    /* Pentru imagini mari care nu se potrivesc ecranului */
-    @media (max-width: 600px) {
-      img {
-        max-width: 90%;
-        max-height: 90vh;
-      }
-    }
-
-    /* Stilizare comună pentru secțiuni */
+    /* Stilizare secțiuni */
     .section {
-      min-height: 100vh;  /* Ocupă cel puțin întreaga înălțime a ecranului */
       width: 100%;
+      min-height: 100vh;
       position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 5vh 0; /* Spațiu între conținut, dar fără să rupă gradientul */
+      padding: 5vh 0;
     }
 
-    /* Prima secțiune - fără fundal propriu, doar text */
-    #section1 a {  <section1 a>
-/* Stilizare pentru linkuri cu chenare ovale */
+    /* Fundal pentru secțiunea 1 */
+    #section1 {
+      background: url("https://github.com/florin7chiscop/Xtime-XTM-TOKEN/raw/main/Abstract%20prima%20sectiune.png") no-repeat center center;
+      background-size: cover;
+    }
+
+    /* Stilizare pentru linkuri */
     #section1 a {
       text-decoration: none;
       color: #333;
-      font-size: 1em; /* Dimensiune mai mică */
+      font-size: 1.2em;
       margin: 10px;
-      padding: 10px 20px; /* Spațiu în jurul textului */
-      border: 2px solid #333; /* Bordură pentru chenar */
-      border-radius: 50px; /* Colțuri rotunjite pentru efect oval */
-      display: inline-block; /* Aliniere pe orizontală */
-      text-align: center;
-      background-color: rgba(255, 255, 255, 0.7); /* Fundal transparent */
-    }
-
-    /* Așezăm cele două linkuri una lângă alta */
-    #section1 h1, #section1 h2 {
+      padding: 10px 20px;
+      border: 2px solid #333;
+      border-radius: 50px;
       display: inline-block;
-      margin: 0 15px; /* Distanță între cele două elemente */
-    } 
-  </section1 a>
-      text-decoration: none;
-      color: #333;
-      font-size: 2em;
-      margin: 10px;
+      background-color: rgba(255, 255, 255, 0.7);
+      transition: 0.3s;
     }
 
-    /* Imaginea overlay ce vine peste fundalul din a doua secțiune */
+    #section1 a:hover {
+      background-color: #ddd;
+    }
+
+    /* Imaginea din secțiunea 2 */
     .overlay-image {
-      position: absolute;
-      top: 25%; /* Poziționăm imaginea mai sus pentru a nu tăia marginea de jos */
-      left: 50%;
-      transform: translate(-50%, -50%) scale(1); /* Creștem dimensiunea de 1.5x */
-      z-index: 2;
-      max-width: 60%; /* Am dublat dimensiunea față de 30% */
+      max-width: 60%;
       height: auto;
+    }
+
+    /* Media query pentru ecrane mici */
+    @media (max-width: 600px) {
+      .overlay-image {
+        max-width: 90%;
+      }
     }
 
   </style>
@@ -123,21 +84,20 @@
 <body>
   <!-- Secțiunea 1: Pagina principală -->
   <section id="section1" class="section">
-    
     <h1>
       <a href="https://web.telegram.org/a/#-1001811980749" target="_blank">Link către Telegram</a>
     </h1>
-    <h2><a href="#section2">Info</a></h2>
-    
+    <h2>
+      <a href="#section2">Info</a>
+    </h2>
   </section>
 
   <!-- Secțiunea 2: Conținutul cu imaginea overlay -->
- 
   <section id="section2" class="section">
-    <!-- Imaginea overlay (format PNG) plasată peste fundal -->
-    <img src="https://github.com/florin7chiscop/Xtime-XTM-TOKEN/raw/main/Tokenalocation%203.0.png" alt="Imagine overlay" class="overlay-image">
+    <img src="https://github.com/florin7chiscop/Xtime-XTM-TOKEN/raw/main/Tokenalocation%203.0.png" alt="Token Allocation" class="overlay-image">
   </section>
-  
 </body>
+</html>
+
 </html>
 
