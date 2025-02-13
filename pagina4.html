@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trimite adresa portofelului</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h2>Trimite adresa portofelului pentru airdrop</h2>
+    <form id="walletForm">
+        <input type="text" id="walletAddress" placeholder="Introduceți adresa portofelului" required>
+        <button type="submit">Trimite</button>
+    </form>
+
+    <script>
+        document.getElementById('walletForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let walletAddress = document.getElementById('walletAddress').value.trim();
+            if (walletAddress === '') {
+                alert('Introduceți o adresă validă!');
+                return;
+            }
+            
+            // Înlocuiește URL-ul cu endpoint-ul tău de stocare
+            fetch('URL_UNDE_SALVEZI_DATELE', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ address: walletAddress })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Adresă trimisă cu succes!');
+                document.getElementById('walletForm').reset();
+            })
+            .catch(error => {
+                console.error('Eroare:', error);
+                alert('A apărut o eroare, încercați din nou!');
+            });
+        });
+    </script>
+</body>
+</html>
